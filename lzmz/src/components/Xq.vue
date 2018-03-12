@@ -28,19 +28,26 @@
       	
       	        <!-- banner图banner图 -->
 				<div class = "section_banner">
-					<ul class = "section_banner_ul">
-						<li class = "section_banner_li">
-							<img src="../../static/img/2.jpg" class = "section_banner_img1">
-						</li>
-					</ul>
+					<div class = "swiper-container">
+							<ul class = "section_banner_ul ">
+								<li class = "section_banner_li">
+									<mt-swipe :auto="0">
+								  <mt-swipe-item><img src="../../static/img/2.jpg"  class = "section_banner_img1"></mt-swipe-item>
+								  <mt-swipe-item><img src="../../static/img/3.jpg"  class = "section_banner_img1"></mt-swipe-item>
+								  <mt-swipe-item><img src="../../static/img/2.jpg"  class = "section_banner_img1"></mt-swipe-item>
+								  <mt-swipe-item><img src="../../static/img/3.jpg"  class = "section_banner_img1"></mt-swipe-item>								  
+	                </mt-swipe>
+								</li>
+							</ul>
+					</div>
 					
 					<div class = "section_banner_num">
 						1/4
 					</div>
 					
-					<div class = "section_banner_content">
+					<div class = "section_banner_content" style="z-index: 1000;">
 						<span class = "section_banner_name">
-							Beauty Artisan美丽工匠薄款纯棉化妆棉1000片 两盒装
+							{{$route.params.fid[0]}}
 						</span>
 						<a href="javascripts:;" class = "section_banner_sc">
 							<p class = "section_banner_img">
@@ -56,10 +63,10 @@
 				<div class = "section_price">
 					<div class = "section_price_in">
 						<div class = "section_price_left">
-							<p class = "section_price_price"><span>¥</span>46.00</p>
+							<p class = "section_price_price"><span>¥</span>{{$route.params.fid[1]}}</p>
 						</div>
 						<div class = "section_price_right">
-							<p class = "section_price_count"><span>3657</span>人已购买</p>
+							<p class = "section_price_count"><span>{{$route.params.fid[2]}}</span>人已购买</p>
 						</div>
 					</div>
 				</div>
@@ -80,36 +87,12 @@
 						<p class = "parameter_top_p">商品参数</p>
 					</div>
 					<div class = "parameter_foot"> 
-						<ul class="parameter_foot_ul">
-							<li class="parameter_foot_li">
-								<span class="parameter_foot_span">商品名称&nbsp;:&nbsp;</span>
-								<p class="parameter_foot_p">Beauty Artisan美丽工匠薄款纯棉化妆棉1000片 两盒装</p>
-							</li>
-							<li class="parameter_foot_li">
-								<span class="parameter_foot_span">所属品牌&nbsp;:&nbsp;</span>
-								<p class="parameter_foot_p">美丽工匠</p>
-							</li>
-							<li class="parameter_foot_li">
-								<span class="parameter_foot_span">产地&nbsp;:&nbsp;</span>
-								<p class="parameter_foot_p">中国</p>
-							</li>
-							<li class="parameter_foot_li">
-								<span class="parameter_foot_span">适用肤质&nbsp;:&nbsp;</span>
-								<p class="parameter_foot_p">干性肌肤,敏感肌肤,油性肌肤,混合肌肤,中性肌肤</p>
-							</li>
-							<li class="parameter_foot_li">
-								<span class="parameter_foot_span">生产日期&nbsp;:&nbsp;</span>
-								<p class="parameter_foot_p">详见商品包装</p>
-							</li>
-							<li class="parameter_foot_li">
-								<span class="parameter_foot_span">保质期&nbsp;:&nbsp;</span>
-								<p class="parameter_foot_p">3年</p>
-							</li>
-							<li class="parameter_foot_li">
-								<span class="parameter_foot_span">包装方式&nbsp;:&nbsp;</span>
-								<p class="parameter_foot_p">有何又树林</p>
-							</li>
-						</ul>
+							<ul class="parameter_foot_ul" v-for="item in oList">
+									<li class="parameter_foot_li">
+										<span class="parameter_foot_span">{{item.val}}&nbsp;:&nbsp;</span>
+										<p class="parameter_foot_p">{{item.con}}</p>
+									</li>
+							</ul>
 					</div>
 				</div>
 				
@@ -191,41 +174,17 @@
 					</div>
 					
 					<div class = "section_Recommend_con">
-						<ul class = "section_Recommend_ul">
-							<li class = "section_Recommend_li">
+						<ul class = "section_Recommend_ul" >
+							<li class = "section_Recommend_li" v-for="item in ulist">
 								<a href="javascripts:;">
-											<img  class = "section_Recommend_li_img"  src="../../static/img/16.jpg">
+											<img  class = "section_Recommend_li_img"  :src="item.img">
 								</a>
 								<h3 class = "section_Recommend_li_h3">
-									买3送1 美丽工匠化妆棉200片
+									{{item.con}}
 								</h3>
 								<p>
-									<span class = "section_Recommend_li_s1">¥20.72</span>
-									<span class = "section_Recommend_li_s2">¥40.00</span>
-								</p>
-							</li>
-							<li class = "section_Recommend_li">
-								<a href="javascripts:;">
-											<img  class = "section_Recommend_li_img"  src="../../static/img/16.jpg">
-								</a>
-								<h3 class = "section_Recommend_li_h3">
-									买3送1 美丽工匠化妆棉200片
-								</h3>
-								<p>
-									<span class = "section_Recommend_li_s1">¥20.72</span>
-									<span class = "section_Recommend_li_s2">¥40.00</span>
-								</p>
-							</li>
-							<li class = "section_Recommend_li">
-								<a href="javascripts:;">
-											<img  class = "section_Recommend_li_img"  src="../../static/img/16.jpg">
-								</a>
-								<h3 class = "section_Recommend_li_h3">
-									买3送1 美丽工匠化妆棉200片
-								</h3>
-								<p>
-									<span class = "section_Recommend_li_s1">¥20.72</span>
-									<span class = "section_Recommend_li_s2">¥40.00</span>
+									<span class = "section_Recommend_li_s1">{{item.price1}}</span>
+									<span class = "section_Recommend_li_s2">{{item.price2}}</span>
 								</p>
 							</li>
 						</ul>
@@ -245,41 +204,17 @@
 					</div>
 					
 					<div class = "section_Recommend_con">
-						<ul class = "section_Recommend_ul">
-							<li class = "section_Recommend_li">
+						<ul class = "section_Recommend_ul" >
+							<li class = "section_Recommend_li" v-for="item in ulist">
 								<a href="javascripts:;">
-											<img  class = "section_Recommend_li_img"  src="../../static/img/14.jpg">
+											<img  class = "section_Recommend_li_img"  :src="item.img">
 								</a>
 								<h3 class = "section_Recommend_li_h3">
-									买3送1 美丽工匠化妆棉200片
+									{{item.con}}
 								</h3>
 								<p>
-									<span class = "section_Recommend_li_s1">¥20.72</span>
-									<span class = "section_Recommend_li_s2">¥40.00</span>
-								</p>
-							</li>
-							<li class = "section_Recommend_li">
-								<a href="javascripts:;">
-											<img  class = "section_Recommend_li_img"  src="../../static/img/15.jpg">
-								</a>
-								<h3 class = "section_Recommend_li_h3">
-									买3送1 美丽工匠化妆棉200片
-								</h3>
-								<p>
-									<span class = "section_Recommend_li_s1">¥20.72</span>
-									<span class = "section_Recommend_li_s2">¥40.00</span>
-								</p>
-							</li>
-							<li class = "section_Recommend_li">
-								<a href="javascripts:;">
-											<img  class = "section_Recommend_li_img"  src="../../static/img/14.jpg">
-								</a>
-								<h3 class = "section_Recommend_li_h3">
-									买3送1 美丽工匠化妆棉200片
-								</h3>
-								<p>
-									<span class = "section_Recommend_li_s1">¥20.72</span>
-									<span class = "section_Recommend_li_s2">¥40.00</span>
+									<span class = "section_Recommend_li_s1">{{item.price1}}</span>
+									<span class = "section_Recommend_li_s2">{{item.price2}}</span>
 								</p>
 							</li>
 						</ul>
@@ -292,16 +227,20 @@
 							商品介绍
 						</div>
 						<div class = "piccon_pic">
-							
+							  <ul>
+							  	 <li v-for="item in imglist" class = "piccon_pic_li">
+							  	 	   <img :src="item.img">
+							  	 </li>
+							  </ul>
 						</div>
 				</div>
 			
-	            <!--  这是尾部啊  -->
-	            <div id = "section_fot">
-	            	<p>登录·注册·客户端</p>
-	            	<p>栗子客服:0527-80203555</p>
-	            	<p>©2015&nbsp;丽子美妆&nbsp;lizi.com</p>
-	            </div>
+	      <!--  这是尾部啊  -->
+	      <div id = "section_fot">
+	           <p>登录·注册·客户端</p>
+	           <p>栗子客服:0527-80203555</p>
+	           <p>©2015&nbsp;丽子美妆&nbsp;lizi.com</p>
+	       </div>
       	
       	
       </section>
@@ -310,14 +249,16 @@
 			
 				
 			<!--购物车页面购物车-->
-			<div id = "shopcar">
-				<a  class = "shopcar_a iconfont icon-icon-- " href="javascripts:;" >
-					<span ></span>
-				</a>	
-				<p class = "shopcar_p">
-					0
-				</p>
-		    </div>
+			<router-link to="/pay">
+					<div id = "shopcar">
+						<a  class = "shopcar_a iconfont icon-icon-- " href="javascripts:;" >
+							<span ></span>
+						</a>	
+						<p class = "shopcar_p">
+							0
+						</p>
+				    </div>
+			</router-link>	    
             <!--回到顶部回到顶部-->
 			<div id = "backheader" class = "iconfont icon-shangjiantou"  @click="packtop()">
 				
@@ -327,7 +268,6 @@
 </template>
 
 <script>
-	
 import axios from 'axios';
 import Footer from './Footer'	
 	
@@ -336,12 +276,53 @@ export default {
 	  components : {
 	  	Footer
 	  },
+	  mounted(){  	
+	  	axios.get("/note/api/GetSocialDiscoverList?Page=0&pageSize=35&AccessToken=&UserID=&Cookieid=&yid=")
+ 	.then((res)=>{
+		console.log(res);	
+ 	})
+
+	  },
 	  data () {
 	    return {
 	      msg : '商品详情',
-	      client : '丽子美妆客户端'
-	    }
-	  },
+	      client : '丽子美妆客户端',
+//	      mounted()  {
+//	      	axios.get("")
+//	      },
+	      list : [
+	          {imgSrc: "../../static/img/2.jpg"},
+	          {imgSrc: "../../static/img/3.jpg"},
+	          {imgSrc: "../../static/img/2.jpg"},
+	          {imgSrc: "../../static/img/3.jpg"}
+	      ],
+	      oList : [
+	          {val : "商品名称" , con : "Beauty Artisan美丽工匠薄款纯棉化妆棉1000片 两盒装"},
+	          {val : "所属品牌" , con : "美丽工匠"},
+	          {val : "产地" , con : "中国"},
+	          {val : "适用肤质" , con : "干性肌肤,敏感肌肤,油性肌肤,混合肌肤,中性肌肤"},
+	          {val : "生产日期" , con : "详见商品包装"},
+	          {val : "保质期" , con : "3年"},
+	          {val : "包装方式" , con : "有何又树林"}
+	      ],
+	     ulist : [
+	          { img:"../../static/img/16.jpg", con:"买3送1 美丽工匠化妆棉200片" ,price1 : "¥20.72",price2:"¥40.00"},
+	           { img:"../../static/img/15.jpg", con:"Beauty Artisan美丽工匠薄款纯棉化妆棉1000片" ,price1 : "¥20.72",price2:"¥40.00"},
+	            { img:"../../static/img/16.jpg", con:"买3送1 美丽工匠化妆棉200片" ,price1 : "¥20.72",price2:"¥40.00"},
+	             { img:"../../static/img/15.jpg", con:"Beauty Artisan美丽工匠薄款纯棉化妆棉1000片" ,price1 : "¥20.72",price2:"¥40.00"}
+	    
+	    ],
+	    imglist : [
+	         {img : "http://img.lizi.com/lizi/store/554b07acf31ef04978652554/28a617c70b1a4.jpg!wh600"},
+	         {img : "http://img.lizi.com/lizi/store/554b07acf31ef04978652554/c3a22a0d74a0.jpg!wh600"},
+	         {img : "http://img.lizi.com/lizi/store/554b07acf31ef04978652554/c3a22a0d74a0.jpg!wh600"},
+	         {img : "http://img.lizi.com/lizi/store/554b07acf31ef04978652554/2e5548ceaea31.jpg!wh600"},
+	         {img : "http://img.lizi.com/lizi/store/554b07acf31ef04978652554/22f6e6bf679a8.jpg!wh600"},
+	         {img : "http://img.lizi.com/lizi/store/554b07acf31ef04978652554/22f6e6bf6959f.jpg!wh600"},
+	         {img : "http://img.lizi.com/lizi/store/554b07acf31ef04978652554/2e5548ceb0dd4.jpg!wh600"}
+	    ]
+	}
+},
 	  methods : {
 	  	packtop : function(){
 	  		document.documentElement.scrollTop = document.body.scrollTop = 0;	
@@ -388,6 +369,9 @@ html{
 	flex-direction: column;
 }
 
+.mint-swipe-indicators{
+	display: none;
+}
    /*sectionwrap样式布局*/
 #sectionwrap{
 	width: 100%;
@@ -566,6 +550,25 @@ html{
 	height:2rem;
 	line-height: 2rem;
 }
+
+.section_banner_li:nth-child(2){
+	position: absolute;
+	top: 0;
+	left: 3.75rem;
+}
+
+.section_banner_li:nth-child(3){
+	position: absolute;
+	top: 0;
+	left: 3.75rem;
+}
+
+.section_banner_li:nth-child(4){
+	position: absolute;
+	top: 0;
+	left: 3.75rem;
+}
+
 
 .section_banner_img1{
 	display: inline-block;
@@ -970,7 +973,7 @@ html{
     /*商品图片介绍*/
 #piccon{
 	width: 100%;
-	height: 2rem;
+	height: auto;
 	margin-bottom: .2rem;
 	padding: .1rem;
 }
@@ -985,10 +988,18 @@ html{
 	font-size: .16rem;
 }
 
+.piccon_pic{
+	width: 100%;
+}
+
+.piccon_pic_li img{
+	width: 100%;
+}
+
    /*这是section的尾部啊*/
 #section_fot{
 	color: #999;
-	height: 1.15rem;
+	height: 1.65rem;
 	text-align: center;
 	font-size: .12rem;
 	background: whitesmoke;

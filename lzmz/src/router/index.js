@@ -10,7 +10,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/xq/:fid',
       name: 'Xq',
       component: ()=>import('../components/Xq')
       
@@ -19,6 +19,11 @@ export default new Router({
       path: '/pay',
       name: 'Paymoney',
       component: ()=>import('../components/Paymoney')
+    },
+    {
+      path: '/list',
+      name: 'List',
+      component: ()=>import('../components/List')
     }
   ]
 })

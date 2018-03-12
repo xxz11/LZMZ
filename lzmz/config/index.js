@@ -10,7 +10,12 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+    	"/note/api" : {
+    		target:"http://m.ymatou.com",
+    		changeOrigin : true
+    	}
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

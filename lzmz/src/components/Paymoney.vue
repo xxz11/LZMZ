@@ -126,12 +126,12 @@
 	      
 	      
 	      <!--是否开具发票-->
-	      	<div class = "section_invoice">
-	      		  <div class = "invoice_left">
+	      	<div class = "section_invoice2">
+	      		  <div class = "invoice_left2">
 	      		  	使用余额
 	      		  </div>
-	      		  <div class = "invoice_right">
-	      		  	<span class = "right_use">
+	      		  <div class = "invoice_right2">
+	      		  	<span class = "right_use2">
 	      		  		 <label></label>
 	      		  	</span>
 	      		  </div>
@@ -485,6 +485,52 @@ html{
 .coupon_li:nth-child(2){
 	float: right;
 }
+
+
+/*使用余额*/
+.section_invoice2{
+	height: .43rem;
+	width: 100%;
+	padding: .1rem .15rem;
+	border-bottom: .01rem solid #e8e8e8;
+	font-size: .16rem;
+	margin-bottom: 2rem;
+}
+
+.invoice_left2{
+	width: 70%;
+	padding-top: .02rem;
+	float: left;
+}
+
+.invoice_right2{
+	font-size: .12rem;
+	text-align: right;
+	color: #999;
+	-webkit-tap-highlight-color:rgb(0,0,0,0)
+}
+
+.right_use2{
+	display: inline-block;
+	width: .39rem;
+	height: .22rem;
+	border-radius: .15rem;
+	background: #ddd;
+	position: relative;
+}
+
+.right_use2 label{
+	position: absolute;
+	left: .01rem;
+	top: .01rem;
+	width: .2rem;
+	height: .2rem;
+	border-radius: .1rem;
+	background: #F5F5F5;
+	transition: all .3s;
+}
+
+
 
 
 

@@ -10,13 +10,7 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    	proxyTable: {
-    	   "/team":{
-			    		target: "http://nba.stats.qq.com",
-			    		changeOrigin: true
-    	}
-
-    },
+    proxyTable: {},
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
@@ -42,7 +36,7 @@ module.exports = {
     cssSourceMap: true
   },
 
-  build: {
+  build:{
     // Template for index.html
     index: path.resolve(__dirname, '../dist/index.html'),
 

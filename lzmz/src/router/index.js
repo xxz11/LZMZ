@@ -11,23 +11,14 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: ()=>import('../components/HelloWorld')
+      name: 'Xq',
+      component: ()=>import('../components/Xq')
+      
     },
-     {
-      path: '/two/',
-      name: 'Two',
-      component: ()=>import('../components/Two')
-    },
-     {
-      path: '/three/',
-      name: 'Three',
-      component: ()=>import('../components/Three')
-    },
-     {
-      path: '/lakers/:fid',
-      name: 'Lakers',
-      component: ()=>import('../components/Lakers')
+    {
+      path: '/pay',
+      name: 'Paymoney',
+      component: ()=>import('../components/Paymoney')
     }
   ]
 })

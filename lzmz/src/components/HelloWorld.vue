@@ -15,11 +15,6 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
-  },
-   mounted() {  axios.get("/team/?id=5?ptag=baidu.ald.sc.nba")
-    .then((res)=>{
-      console.log(res);
-    })
   }
 }    
 </script>

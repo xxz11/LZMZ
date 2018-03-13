@@ -2,261 +2,277 @@
   <div id="all">
       <section id = "sectionwrap">
       	
-				       <!-- 头部头部 -->
-				<div class = "section_header">
-					<div class = "header_back iconfont icon-sdf">
-					</div>
-					<div class = "header_show">
-						{{msg}}
-					</div>
-					<div class = "header_index iconfont icon-home">
-					</div>
-				</div>
-				
-				       <!-- 下载客户端下载客户端 -->
-				<div class = "section_nav">
-					<ul class = "section_nav_ul">
-						<li><img class = "section_nav_img" src="../../static/img/touch-logo(2).png"></li>
-						<li><p class = "section_nav_pc">{{client}}</p></li>
-						<li>
-							<div class="section_nav_down">
-								立即下载
+							       <!-- 头部头部 -->
+							<div class = "section_header">
+											<div class = "header_back iconfont icon-sdf">
+											</div>
+											<div class = "header_show">
+												{{msg}}
+											</div>
+											<div class = "header_index iconfont icon-home">
+											</div>
 							</div>
-						</li>
-					</ul>
-				</div>      	
-      	
-      	        <!-- banner图banner图 -->
-				<div class = "section_banner">
-					<div class = "swiper-container">
-							<ul class = "section_banner_ul ">
-								<li class = "section_banner_li">
-									<mt-swipe :auto="0">
-								  <mt-swipe-item><img src="../../static/img/2.jpg"  class = "section_banner_img1"></mt-swipe-item>
-								  <mt-swipe-item><img src="../../static/img/3.jpg"  class = "section_banner_img1"></mt-swipe-item>
-								  <mt-swipe-item><img src="../../static/img/2.jpg"  class = "section_banner_img1"></mt-swipe-item>
-								  <mt-swipe-item><img src="../../static/img/3.jpg"  class = "section_banner_img1"></mt-swipe-item>								  
-	                </mt-swipe>
-								</li>
-							</ul>
-					</div>
-					
-					<div class = "section_banner_num">
-						1/4
-					</div>
-					
-					<div class = "section_banner_content" style="z-index: 1000;">
-						<span class = "section_banner_name">
-							{{$route.params.fid[0]}}
-						</span>
-						<a href="javascripts:;" class = "section_banner_sc">
-							<p class = "section_banner_img">
-								<img src="../../static/img/star-gray.png"> 
-							</p>
-							<span>收藏</span>
-						</a>
-					</div>
-				</div>
-				
-				
-				      <!-- 商品价格 -->
-				<div class = "section_price">
-					<div class = "section_price_in">
-						<div class = "section_price_left">
-							<p class = "section_price_price"><span>¥</span>{{$route.params.fid[1]}}</p>
-						</div>
-						<div class = "section_price_right">
-							<p class = "section_price_count"><span>{{$route.params.fid[2]}}</span>人已购买</p>
-						</div>
-					</div>
-				</div>
-      	
-				
-				      <!-- 商品介绍商品介绍 -->
-				<div class = "section_introduce">
-					<p class = "section_introduce_p">
-						亲肤无刺激 超薄轻巧
-					</p>
-				</div>
-				
-				
-				       <!-- 商品参数商品参数 -->
-				<div class = "section_parameter">
-					<div class = "parameter_top">
-						<span class="xian"></span>
-						<p class = "parameter_top_p">商品参数</p>
-					</div>
-					<div class = "parameter_foot"> 
-							<ul class="parameter_foot_ul" v-for="item in oList">
-									<li class="parameter_foot_li">
-										<span class="parameter_foot_span">{{item.val}}&nbsp;:&nbsp;</span>
-										<p class="parameter_foot_p">{{item.con}}</p>
-									</li>
-							</ul>
-					</div>
-				</div>
-				
-				
-				
-				
-				<!--这是客户评价的地方-->
-				<div class = "section_evaluate">
-					<div class = "parameter_top">
-						<span class="xian"></span>
-						<p class = "parameter_top_p">评价详情(<span>15573</span>)</p>
-						<a href="www.baidu.com" class = "show_more">
-							查看更多>
-						</a>
-					</div>
-					<div class = "parameter_con">
-						<ul class = "parameter_con_ul">
-							<li class = "parameter_con_li">
-								<a href="https://www.zhihu.com/" class = "parameter_con_li_a">
-									<div class = "parameter_con_li_name">
-										<img src="../../static/img/5.jpg" class = "parameter_con_li_name_img">
-										<p class = "parameter_con_li_name_p">159****0202</p>
-										<span class = "parameter_con_li_name_span"></span>
-									</div>
-									<div class = "parameter_con_li_font">
-											<p class="parameter_con_li_font_txt">每次都是在丽子上买护肤品'化妆品'赠品也很多'就是这个兰芝的套盒是用保鲜膜在中间缠了几圈'不过味道也挺好闻的</p>
-									</div>
-									<div class = "parameter_con_li_img">
-										<img src="img/1.jpg">
-									</div>
-									<div class = "parameter_con_li_no">
-										<span>规格:无&nbsp;&nbsp;&nbsp;&nbsp;无</span>
-									</div>
-								</a>
-							</li>
+							
+							       <!-- 下载客户端下载客户端 -->
+							<div class = "section_nav">
+											<ul class = "section_nav_ul">
+														<li><img class = "section_nav_img" src="../../static/img/touch-logo(2).png"></li>
+														<li><p class = "section_nav_pc">{{client}}</p></li>
+														<li>
+																	<div class="section_nav_down">
+																		立即下载
+																	</div>
+														</li>
+											</ul>
+							</div>      	
+			      	
+			      	        <!-- banner图banner图 -->
+							<div class = "section_banner">
+								<div class = "swiper-container">
+										<ul class = "section_banner_ul ">
+											<li class = "section_banner_li">
+												<mt-swipe :auto="0">
+											  <mt-swipe-item><img src="../../static/img/2.jpg"  class = "section_banner_img1"></mt-swipe-item>
+											  <mt-swipe-item><img src="../../static/img/3.jpg"  class = "section_banner_img1"></mt-swipe-item>
+											  <mt-swipe-item><img src="../../static/img/2.jpg"  class = "section_banner_img1"></mt-swipe-item>
+											  <mt-swipe-item><img src="../../static/img/3.jpg"  class = "section_banner_img1"></mt-swipe-item>								  
+				                </mt-swipe>
+											</li>
+										</ul>
+								</div>
+								
+								<div class = "section_banner_num">
+									1/4
+								</div>
+								
+								<div class = "section_banner_content" style="z-index: 1000;">
+											<span class = "section_banner_name">
+												{{$route.params.fid[0]}}
+											</span>
+											<a href="javascripts:;" class = "section_banner_sc">
+														<p class = "section_banner_img">
+															<img src="../../static/img/star-gray.png"> 
+														</p>
+												    <span>收藏</span>
+											</a>
+								</div>
+							</div>
 							
 							
-						</ul>
-					</div>
-				</div>
-				
-				
-				     <!--终于快写完了啊      自营自营-->
-				<div class = "section_store">
-					<div class = "section_in_store">
-						<div class = "section_in_store_img">
-							<img src="../../static/img/9.jpg">
-						</div>
-						<div class = "section_in_store_con">
-							<div class = "section_in_store_con_name">丽子自营</div>
-							<div class = "section_in_store_con_xin">
-								<span class = "">❤</span>
-								<span class = "">❤</span>
-								<span class = "">❤</span>
-								<span class = "">❤</span>
-								<span class = "">❤</span>
+							      <!-- 商品价格 -->
+							<div class = "section_price">
+										<div class = "section_price_in">
+													<div class = "section_price_left">
+														  <p class = "section_price_price"><span>¥</span>{{$route.params.fid[1]}}</p>
+													</div>
+													<div class = "section_price_right">
+														  <p class = "section_price_count"><span>{{$route.params.fid[2]}}</span>人已购买</p>
+													</div>
+										</div>
 							</div>
-							<div class = "section_in_store_con_service">
-								<span>100%正品</span>
-								<span>100%正品</span>
-								<span>100%正品</span>
-								<span>100%正品</span>
+			      	
+							
+							      <!-- 商品介绍商品介绍 -->
+							<div class = "section_introduce">
+									<p class = "section_introduce_p">
+										亲肤无刺激 超薄轻巧
+									</p>
 							</div>
-						</div>
-					</div>
-				</div>
-				
-				
-				
-				
-				      <!--差不多的商品分类了啊-->
-				<div class = "section_Recommend">
-					<div class = "parameter_top">
-						<span class="xian"></span>
-						<p class = "parameter_top_p">相似单品推荐</p>
-						<a href="https://www.baidu.com" class = "show_more">
-							查看更多>
-						</a>
-					</div>
-					
-					<div class = "section_Recommend_con">
-						<ul class = "section_Recommend_ul" >
-							<li class = "section_Recommend_li" v-for="item in ulist">
-								<a href="javascripts:;">
-											<img  class = "section_Recommend_li_img"  :src="item.img">
-								</a>
-								<h3 class = "section_Recommend_li_h3">
-									{{item.con}}
-								</h3>
-								<p>
-									<span class = "section_Recommend_li_s1">{{item.price1}}</span>
-									<span class = "section_Recommend_li_s2">{{item.price2}}</span>
-								</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-				
-				
-				
-				<!--美丽工匠销量排行-->
-				<div class = "section_Recommend">
-					<div class = "parameter_top">
-						<span class="xian"></span>
-						<p class = "parameter_top_p">美丽工匠销量排行</p>
-						<a href="https://www.baidu.com" class = "show_more">
-							进入品牌>
-						</a>
-					</div>
-					
-					<div class = "section_Recommend_con">
-						<ul class = "section_Recommend_ul" >
-							<li class = "section_Recommend_li" v-for="item in ulist">
-								<a href="javascripts:;">
-											<img  class = "section_Recommend_li_img"  :src="item.img">
-								</a>
-								<h3 class = "section_Recommend_li_h3">
-									{{item.con}}
-								</h3>
-								<p>
-									<span class = "section_Recommend_li_s1">{{item.price1}}</span>
-									<span class = "section_Recommend_li_s2">{{item.price2}}</span>
-								</p>
-							</li>
-						</ul>
-					</div>
-				</div>
-				
-				<!--商品图片介绍-->		
-			    <div id = "piccon">
-						<div class = "piccon_con">
-							商品介绍
-						</div>
-						<div class = "piccon_pic">
-							  <ul>
-							  	 <li v-for="item in imglist" class = "piccon_pic_li">
-							  	 	   <img :src="item.img">
-							  	 </li>
-							  </ul>
-						</div>
-				</div>
-			
-	      <!--  这是尾部啊  -->
-	      <div id = "section_fot">
-	           <p>登录·注册·客户端</p>
-	           <p>栗子客服:0527-80203555</p>
-	           <p>©2015&nbsp;丽子美妆&nbsp;lizi.com</p>
-	       </div>
+							
+							
+							       <!-- 商品参数商品参数 -->
+							<div class = "section_parameter">
+										<div class = "parameter_top">
+													<span class="xian"></span>
+													<p class = "parameter_top_p">商品参数</p>
+										</div>
+										<div class = "parameter_foot"> 
+												<ul class="parameter_foot_ul" v-for="item in oList">
+														<li class="parameter_foot_li">
+															<span class="parameter_foot_span">{{item.val}}&nbsp;:&nbsp;</span>
+															<p class="parameter_foot_p">{{item.con}}</p>
+														</li>
+												</ul>
+										</div>
+							</div>
+							
+							
+							
+							
+							<!--这是客户评价的地方-->
+							<div class = "section_evaluate">
+										<div class = "parameter_top">
+													<span class="xian"></span>
+													<p class = "parameter_top_p">评价详情(<span>15573</span>)</p>
+													<a href="www.baidu.com" class = "show_more">
+														查看更多>
+													</a>
+										</div>
+										<div class = "parameter_con">
+													<ul class = "parameter_con_ul">
+																<li class = "parameter_con_li">
+																		<a href="https://www.zhihu.com/" class = "parameter_con_li_a">
+																		<div class = "parameter_con_li_name">
+																					<img src="../../static/img/5.jpg" class = "parameter_con_li_name_img">
+																					<p class = "parameter_con_li_name_p">159****0202</p>
+																					<span class = "parameter_con_li_name_span"></span>
+																		</div>
+																		<div class = "parameter_con_li_font">
+																				<p class="parameter_con_li_font_txt">每次都是在丽子上买护肤品'化妆品'赠品也很多'就是这个兰芝的套盒是用保鲜膜在中间缠了几圈'不过味道也挺好闻的</p>
+																		</div>
+																		<div class = "parameter_con_li_img">
+																					<img src="../../static/img/1.jpg">
+																		</div>
+																		<div class = "parameter_con_li_no">
+																					<span>规格:无&nbsp;&nbsp;&nbsp;&nbsp;无</span>
+																		</div>
+																	</a>
+																</li>
+													</ul>
+										</div>
+							</div>
+							
+							
+							     <!--终于快写完了啊      自营自营-->
+							<div class = "section_store">
+										<div class = "section_in_store">
+													<div class = "section_in_store_img">
+																<img src="../../static/img/9.jpg">
+													</div>
+													<div class = "section_in_store_con">
+																<div class = "section_in_store_con_name">丽子自营</div>
+																<div class = "section_in_store_con_xin">
+																			<span class = "">❤</span>
+																			<span class = "">❤</span>
+																			<span class = "">❤</span>
+																			<span class = "">❤</span>
+																			<span class = "">❤</span>
+																</div>
+																<div class = "section_in_store_con_service">
+																			<span>100%正品</span>
+																			<span>100%正品</span>
+																			<span>100%正品</span>
+																			<span>100%正品</span>
+																</div>
+													</div>
+										</div>
+							</div>
+							
+							
+							
+							
+							      <!--差不多的商品分类了啊-->
+							<div class = "section_Recommend">
+										<div class = "parameter_top">
+													<span class="xian"></span>
+													<p class = "parameter_top_p">相似单品推荐</p>
+													<a href="https://www.baidu.com" class = "show_more">
+														查看更多>
+													</a>
+										</div>
+								
+										<div class = "section_Recommend_con">
+													<ul class = "section_Recommend_ul" >
+																<li class = "section_Recommend_li" v-for="item in ulist">
+																			<a href="javascripts:;">
+																						<img  class = "section_Recommend_li_img"  :src="item.img">
+																			</a>
+																			<h3 class = "section_Recommend_li_h3">
+																				{{item.con}}
+																			</h3>
+																			<p>
+																				<span class = "section_Recommend_li_s1">{{item.price1}}</span>
+																				<span class = "section_Recommend_li_s2">{{item.price2}}</span>
+																			</p>
+																</li>
+													</ul>
+										</div>
+							</div>
+							
+							
+							
+							<!--美丽工匠销量排行-->
+							<div class = "section_Recommend">
+										<div class = "parameter_top">
+													<span class="xian"></span>
+													<p class = "parameter_top_p">美丽工匠销量排行</p>
+													<a href="https://www.baidu.com" class = "show_more">
+														进入品牌>
+													</a>
+										</div>
+								   
+
+										<div class = "section_Recommend_con  swiper-container">
+													<ul class = "section_Recommend_ul  swiper-wrapper" >
+																<li class = "section_Recommend_li  swiper-slide" v-for="item in ulist">
+																			<a href="javascripts:;">
+																					<img  class = "section_Recommend_li_img"  :src="item.img">
+																			</a>
+																			<h3 class = "section_Recommend_li_h3">
+																					{{item.con}}
+																			</h3>
+																			<p>
+																				<span class = "section_Recommend_li_s1">{{item.price1}}</span>
+																				<span class = "section_Recommend_li_s2">{{item.price2}}</span>
+																			</p>
+																</li>
+													</ul>
+										</div>
+							</div>
+							
+							<!--商品图片介绍-->		
+						    <div id = "piccon">
+											<div class = "piccon_con">
+												商品介绍
+											</div>
+										<div class = "piccon_pic">
+											  <ul>
+											  	 <li v-for="item in imglist" class = "piccon_pic_li">
+											  	 	   <img :src="item.img">
+											  	 </li>
+											  </ul>
+										</div>
+							</div>
+						
+				      <!--  这是尾部啊  -->
+				      <div id = "section_fot">
+				           <p>登录·注册·客户端</p>
+				           <p>栗子客服:0527-80203555</p>
+				           <p>©2015&nbsp;丽子美妆&nbsp;lizi.com</p>
+				       </div>
       	
       	
       </section>
       
-      <Footer/>
+      
+      <!--这是页面的尾部-->
+       <footer id = "footerwrap">
+								<ul id = "footerwrap_ul">
+											<li>
+													<p class = "footerwrap_price"><span>¥</span>{{$route.params.fid[1]}}</p>
+											</li>
+											<li>
+													<span class="iconfont icon-buoumaotubiao10  kefu"></span>
+													<p class = "footerwrap_service">客服</p>
+											</li>
+											<li>
+													<div class = "join_shopcar" @click="joinshopcar()">
+																		 加入购物车
+													</div>
+											</li>
+								</ul>
+			</footer>
 			
 				
 			<!--购物车页面购物车-->
-			<router-link to="/pay">
+			<router-link to = "/shopcar">
 					<div id = "shopcar">
-						<a  class = "shopcar_a iconfont icon-icon-- " href="javascripts:;" >
-							<span ></span>
-						</a>	
-						<p class = "shopcar_p">
-							0
-						</p>
+								<a  class = "shopcar_a iconfont icon-icon-- " href="javascripts:;" >
+									<span ></span>
+								</a>	
+								<p class = "shopcar_p">
+									{{count}}
+								</p>
 				    </div>
 			</router-link>	    
             <!--回到顶部回到顶部-->
@@ -269,27 +285,23 @@
 
 <script>
 import axios from 'axios';
-import Footer from './Footer'	
-	
 export default {
 	  name: 'Xq',
-	  components : {
-	  	Footer
-	  },
-	  mounted(){  	
-	  	axios.get("/note/api/GetSocialDiscoverList?Page=0&pageSize=35&AccessToken=&UserID=&Cookieid=&yid=")
- 	.then((res)=>{
-		console.log(res);	
- 	})
-
+	  methods : {
+	  	packtop : function(){
+	  		document.documentElement.scrollTop = document.body.scrollTop = 0;	
+	  	},
+	  	joinshopcar : function(){
+	  		this.count++;
+	  	  this.$store.dispatch("addShopA", this.$route.params);
+	  	}
 	  },
 	  data () {
+//	  	console.log(this.$route.params)
 	    return {
 	      msg : '商品详情',
 	      client : '丽子美妆客户端',
-//	      mounted()  {
-//	      	axios.get("")
-//	      },
+	      count : 0,
 	      list : [
 	          {imgSrc: "../../static/img/2.jpg"},
 	          {imgSrc: "../../static/img/3.jpg"},
@@ -309,8 +321,9 @@ export default {
 	          { img:"../../static/img/16.jpg", con:"买3送1 美丽工匠化妆棉200片" ,price1 : "¥20.72",price2:"¥40.00"},
 	           { img:"../../static/img/15.jpg", con:"Beauty Artisan美丽工匠薄款纯棉化妆棉1000片" ,price1 : "¥20.72",price2:"¥40.00"},
 	            { img:"../../static/img/16.jpg", con:"买3送1 美丽工匠化妆棉200片" ,price1 : "¥20.72",price2:"¥40.00"},
+	             { img:"../../static/img/15.jpg", con:"Beauty Artisan美丽工匠薄款纯棉化妆棉1000片" ,price1 : "¥20.72",price2:"¥40.00"},
+	           { img:"../../static/img/16.jpg", con:"买3送1 美丽工匠化妆棉200片" ,price1 : "¥20.72",price2:"¥40.00"},
 	             { img:"../../static/img/15.jpg", con:"Beauty Artisan美丽工匠薄款纯棉化妆棉1000片" ,price1 : "¥20.72",price2:"¥40.00"}
-	    
 	    ],
 	    imglist : [
 	         {img : "http://img.lizi.com/lizi/store/554b07acf31ef04978652554/28a617c70b1a4.jpg!wh600"},
@@ -320,14 +333,18 @@ export default {
 	         {img : "http://img.lizi.com/lizi/store/554b07acf31ef04978652554/22f6e6bf679a8.jpg!wh600"},
 	         {img : "http://img.lizi.com/lizi/store/554b07acf31ef04978652554/22f6e6bf6959f.jpg!wh600"},
 	         {img : "http://img.lizi.com/lizi/store/554b07acf31ef04978652554/2e5548ceb0dd4.jpg!wh600"}
-	    ]
-	}
-},
-	  methods : {
-	  	packtop : function(){
-	  		document.documentElement.scrollTop = document.body.scrollTop = 0;	
-	  	}
-	  }
+	          ]
+	       }
+       },
+      update(){
+	      	var mySwiper = new Swiper ('.swiper1 .swiper-container', {	 
+				    loop: true,
+				    autoplay:true,
+				     pagination: {
+					      el: '.swiper-pagination',
+					    }
+				  })	  	
+      }
 }
     
 </script>
@@ -362,9 +379,8 @@ html{
 }
 
       /*整体盒子样式*/ 
-#box{
+#all{
 	width: 100%;
-	height: 100%;
 	display: flex;
 	flex-direction: column;
 }
@@ -374,8 +390,6 @@ html{
 }
    /*sectionwrap样式布局*/
 #sectionwrap{
-	width: 100%;
-	height: 100%;
 	flex: 1;
 	overflow: auto;
 }
@@ -800,7 +814,7 @@ html{
 	display: block;
 	color: #222;
 	text-decoration: none;
-	overflow: hidden;
+	overflow: auto;
 }
 
 .parameter_con_li_name{
@@ -930,7 +944,7 @@ html{
 
 .section_Recommend_ul{
 	height: 1.2rem;
-	overflow: hidden;
+	overflow: auto;
 	display: flex;
 	justify-content: space-between;
 }
@@ -1004,5 +1018,84 @@ html{
 	font-size: .12rem;
 	background: whitesmoke;
 	padding-top: .3rem;
+}
+
+
+
+
+    /*footerwrap样式布局*/
+#footerwrap{
+	height: .45rem;
+	width: 100%;
+  background: white;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+#footerwrap_ul{
+	
+}
+
+#footerwrap_ul li{
+	height: .45rem;
+	float: left;
+	line-height: .45rem;
+}
+
+#footerwrap_ul li:nth-child(2){
+
+	float: left;
+
+}
+
+
+#footerwrap_ul li:nth-child(3){
+	height: .45rem;
+	float: right;
+	line-height: .45rem;
+}
+
+.footerwrap_price{
+	font-size: .2rem;
+	width: 1.78rem;
+	margin-left: .15rem;
+	color: #ff666b;
+	font-weight: 600;
+}
+
+.footerwrap_price span{
+	font-size: .14rem;
+}
+
+
+.footerwrap_service{
+	font-size: .1rem;
+	font-weight: 600;
+	height: .1rem;
+	margin-top: .1rem;
+	margin-right: .04rem;
+}
+
+.join_shopcar{
+	height: 100%;
+	width: 1.36rem;
+	background: #ff666b;
+	float: right;
+	font-size: .16rem;
+	text-align: center;
+	color: white;
+	font-weight: 600;
+}
+
+.kefu{
+	font-size: .16rem;
+	font-weight: 600;
+	display: block;
+	color: #ff666b;
+	width: .3rem;
+	height: .15rem;
+	position: absolute;
+	top: -.04rem;
 }
 </style>

@@ -3,23 +3,23 @@
       <section id = "sectionwrap">
 					       <!-- 头部头部 -->
 					<div class = "section_header">
-						<div class = "header_back iconfont icon-sdf">
-						</div>
-						<div class = "header_show">
-							{{msg}}
-						</div>
-						<div class = "header_index iconfont icon-home">
-						</div>
+								<div class = "header_back iconfont icon-sdf">
+								</div>
+								<div class = "header_show">
+										{{msg}}
+								</div>
+								<div class = "header_index iconfont icon-home">
+								</div>
 					</div>
 					
 					       <!-- 收货信息 -->
 					<div class = "section_nav">
-						   收货信息：
+								   收货信息：
 					</div>      	
 	      	
 	      	        <!-- 设置收货地址 -->
 					<div class = "section_address">
-						  请先设置你的收货地址
+								  请先设置你的收货地址
 					</div>
 					
 					
@@ -27,10 +27,10 @@
 					<div class = "section_shop">
 						  <ul class = "shop_ul">
 						  	 <li class = "shop_li">
-						  	 	  丽子自营
+						  	 	 		 丽子自营
 						  	 </li>
 						  	 <li class = "shop_li">
-						  	 	  <span class = "iconfont icon-buoumaotubiao10  shop_span"></span>
+						  	 	 		 <span class = "iconfont icon-buoumaotubiao10  shop_span"></span>
 						  	 </li>
 						  </ul>
 					</div>
@@ -84,8 +84,7 @@
 	      	
 	      	<!--给卖家留言-->
 	      	<div class = "section_message">
-	      		<textarea placeholder="给卖家留言"></textarea>
-	      		
+	      				<textarea placeholder="给卖家留言"></textarea>
 	      	</div>
 	      
 	        <!--运费是否免邮-->
@@ -102,7 +101,7 @@
 	      
 	        <!--价格总计-->
 	        <div class = "section_price">
-	        	  合计：<span class = "price_span">¥236.00</span>
+	        			  合计：<span class = "price_span">¥236.00</span>
 	        </div>
 	      
 	      <!--这是一个空白区域-->
@@ -152,24 +151,16 @@
 									</div>
 								</li>
 					</ul>
-			</footer>
-			
-				
-
-		  
+			</footer>	  
   </div>
 </template>
 
 <script>
 	
 import axios from 'axios';
-import Footer from './Footer'	
 	
 export default {
 	  name: 'Paymoney',
-	  components : {
-	  	Footer
-	  },
 	  data () {
 	    return {
 	      msg : '提交订单',

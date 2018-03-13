@@ -11,10 +11,6 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-    	"/note/api" : {
-    		target:"http://m.ymatou.com",
-    		changeOrigin : true
-    	}
     },
 
     // Various Dev Server settings

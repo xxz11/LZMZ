@@ -24,6 +24,11 @@ export default new Router({
       path: '/list',
       name: 'List',
       component: ()=>import('../components/List')
+    },
+    {
+      path: '/shopcar',
+      name: 'Shopcar',
+      component: ()=>import('../components/Shopcar')
     }
   ]
 })

@@ -29,6 +29,12 @@ export default new Router({
       path: '/shopcar',
       name: 'Shopcar',
       component: ()=>import('../components/Shopcar')
+    },
+    {
+      path: '/personal',
+      name: 'Personal',
+      component: ()=>import('../components/Personal')
     }
   ]
 })
+ 

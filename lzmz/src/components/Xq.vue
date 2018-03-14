@@ -4,8 +4,10 @@
       	
 							       <!-- 头部头部 -->
 							<div class = "section_header">
+								      <router-link to = "/list">
 											<div class = "header_back iconfont icon-sdf">
 											</div>
+											</router-link>
 											<div class = "header_show">
 												{{msg}}
 											</div>
@@ -242,6 +244,37 @@
 				       </div>
       	
       	
+      	
+      	      <!--  点击购物车加载页面 -->
+      	      <div class ="cart_page" :class="{pageshow: flag, 'abc-def': flag}">
+      	      	    <div class = "bg">
+      	      	    	    <ul class ="sku_box">
+      	      	    	    	  <li>
+      	      	    	    	  	  <p class ="box_p">规格</p>
+      	      	    	    	  	  <div class = "box_list">
+      	      	    	    	  	  	    两盒
+      	      	    	    	  	  </div>
+      	      	    	    	  </li>
+      	      	    	    </ul>
+      	      	    	    <ul class = "sku_num">
+      	      	    	    	   <li>
+      	      	    	    	   	   <p class = "box_p">数量
+      	      	    	    	   	       <span>
+      	      	    	    	   	   	        (库存180件)
+      	      	    	    	   	       </span>
+      	      	    	    	   	   </p>
+      	      	    	    	   	   <div class = "num_cle">
+      	      	    	    	   	   	    <div id = "num_right">
+      	      	    	    	   	   	    	   <span class = "num_one  addone">+</span>
+      	      	    	    	   	   	    	   <input type="number" min="1" value="1" class="num_input">
+      	      	    	    	   	   	    	   <span class = "num_one  disone">-</span>
+      	      	    	    	   	   	    </div> 
+      	      	    	    	   	   </div>
+      	      	    	    	   </li>
+      	      	    	    </ul>
+      	      	    	    
+      	      	    </div>
+      	      </div>
       </section>
       
       
@@ -294,6 +327,7 @@ export default {
 	  	joinshopcar : function(){
 	  		this.count++;
 	  	  this.$store.dispatch("addShopA", this.$route.params);
+	  	  this.flag = !this.flag;
 	  	}
 	  },
 	  data () {
@@ -301,6 +335,7 @@ export default {
 	    return {
 	      msg : '商品详情',
 	      client : '丽子美妆客户端',
+	      flag : false,
 	      count : 0,
 	      list : [
 	          {imgSrc: "../../static/img/2.jpg"},
@@ -1021,9 +1056,141 @@ html{
 }
 
 
+ /*<div id = "cart_page">
+      	      	    <div class = "bg">
+      	      	    	    <ul class ="sku_box">
+      	      	    	    	  <li>
+      	      	    	    	  	  <p class ="box_p"></p>
+      	      	    	    	  	  <div>
+      	      	    	    	  	  	
+      	      	    	    	  	  </div>
+      	      	    	    	  </li>
+      	      	    	    </ul>
+      	      	    	    <ul class = "sku_num">
+      	      	    	    	   <li>
+      	      	    	    	   	   <p class = "box_p">数量
+      	      	    	    	   	       <span>
+      	      	    	    	   	   	        (库存180件)
+      	      	    	    	   	       </span>
+      	      	    	    	   	   </p>
+      	      	    	    	   	   <div class = "num_cle">
+      	      	    	    	   	   	    <div id = "num_right">
+      	      	    	    	   	   	    	   <span class = "num_one  disone">-</span>
+      	      	    	    	   	   	    	   <input type="number" min="1" value="1">
+      	      	    	    	   	   	    	   <span class = "num_one  addone">-</span>
+      	      	    	    	   	   	    </div> 
+      	      	    	    	   	   </div>
+      	      	    	    	   </li>
+      	      	    	    </ul>
+      	      	    	    
+      	      	    </div>
+      	      </div>*/
 
 
-    /*footerwrap样式布局*/
+
+
+
+
+/*---------------点击购物车加载----------------------------*/
+.cart_page{
+	    bottom: 45px;
+	    z-index: 7000;
+	    background: rgba(0,0,0,.5);
+	    width: 100%;
+	    height: 2000px;
+	    position: fixed;
+	    left: 0;
+	    bottom: .45rem;
+	    overflow: hidden;
+	    opacity: 0;
+	    visibility: hidden;
+	    -webkit-transition: opacity .4s;
+	    transition: opacity .4s;
+}
+
+.pageshow{
+	    opacity: 1;
+	    visibility: visible;
+}
+
+.bg{
+	    height: 1.79rem;
+	    width: 100%;
+	    transform: translate(0,0);
+	    position: fixed;
+	    left: 0;
+	    top: 4.43rem;
+	    transition: all .5s;
+	    font-size: .12rem;
+	    background: #fff;
+	    border-bottom: .01rem solid #e9e9e9;
+}
+
+.sku_box{
+	    padding: .1rem;
+	    border-bottom: .01rem solid #eee;
+	    margin-bottom: .1rem;
+}
+
+.box_p{
+	    margin-bottom: .1rem;
+	    font-size: .16rem;
+}
+
+.box_list{
+	    font-size: .14rem;
+	    background: #ff666b;
+	    width: .54rem;
+	    height: .3rem;
+	    text-align: center;
+	    line-height: .3rem;
+	    color: #fff;
+	    font-weight: 600;
+	   
+}
+
+.sku_num{
+	    padding: .1rem;
+}
+
+.num_cle{
+	    text-align: right;
+}
+
+#num_right{
+     overflow: hidden;	
+}
+
+.num_one{
+	    display: block;
+	    float: right;
+	    height: .3rem;
+	    width: .3rem;
+	    border: .01rem solid #ccc;
+	    background: #eee;
+	    font-size: .24rem;
+	    line-height: .18rem;
+	    color: #666;
+	    text-align: center;
+}
+
+.num_input{
+	    width: .34rem;
+	    height: .3rem;
+	    border: none;
+	    border-top: 1px solid #ccc;
+	    border-bottom: 1px solid #ccc;
+	    font-size: 14px;
+	    background-color: #fff;
+	    float: right;
+	    text-align: center;
+}
+
+
+
+
+
+    /*----------------------------------------footerwrap样式布局*/
 #footerwrap{
 	height: .45rem;
 	width: 100%;
@@ -1031,6 +1198,7 @@ html{
   position: fixed;
   left: 0;
   bottom: 0;
+  z-index: 20000;
 }
 
 #footerwrap_ul{
